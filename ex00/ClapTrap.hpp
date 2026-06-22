@@ -6,7 +6,7 @@
 /*   By: vcucuiet <vita@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/22 00:05:52 by vcucuiet          #+#    #+#             */
-/*   Updated: 2026/06/22 01:29:49 by vcucuiet         ###   ########.fr       */
+/*   Updated: 2026/06/22 22:58:33 by vcucuiet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ private:
 	unsigned int	Attack_damage;
 public:
 	/* Constructor */
-	ClapTrap(void);
+	ClapTrap();
 	ClapTrap(std::string new_name);
 	ClapTrap(ClapTrap const & src);
 
@@ -42,6 +42,7 @@ public:
 	unsigned int	get_Ep(void) const ;
 	unsigned int	get_Hp(void) const ;
 	unsigned int	get_Ad(void) const ;
+	std::string		get_name(void) const ;
 };
 
 

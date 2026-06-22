@@ -6,20 +6,20 @@
 /*   By: vcucuiet <vita@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/22 00:11:46 by vcucuiet          #+#    #+#             */
-/*   Updated: 2026/06/22 01:38:49 by vcucuiet         ###   ########.fr       */
+/*   Updated: 2026/06/22 22:42:35 by vcucuiet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include"ClapTrap.hpp"
 
-ClapTrap::ClapTrap(void): name("without_name"), Hit_point(10),
+ClapTrap::ClapTrap(): name(""), Hit_point(10),
 Energy_point(10), Attack_damage(0) {
 	std::cout << "ClapTrap constructor called for :" << name << std::endl;	
 }
 
 ClapTrap::ClapTrap(std::string new_name): name(new_name), Hit_point(10),
 Energy_point(10), Attack_damage(0) {
-	std::cout << "ClapTrap constructor called for :" << name << std::endl;	
+	std::cout << "ClapTrap constructor called for :" << name << std::endl;
 }
 
 ClapTrap::ClapTrap(ClapTrap const & src): name(src.name), Hit_point(src.Hit_point),
@@ -92,4 +92,7 @@ unsigned int	ClapTrap::get_Hp(void) const {
 }
 unsigned int	ClapTrap::get_Ad(void) const {
 	return (this->Attack_damage);
+}
+std::string	ClapTrap::get_name(void) const {
+	return (this->name);
 }

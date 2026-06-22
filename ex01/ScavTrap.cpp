@@ -6,7 +6,7 @@
 /*   By: vcucuiet <vcucuiet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/22 10:28:08 by vcucuiet          #+#    #+#             */
-/*   Updated: 2026/06/22 14:27:41 by vcucuiet         ###   ########.fr       */
+/*   Updated: 2026/06/22 16:13:33 by vcucuiet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -95,11 +95,16 @@ unsigned int	ScavTrap::get_Ad(void) const {
 }
 
 void	ScavTrap::guardGate() {
+	if(!Hit_point || !Energy_point)
+	{
+		std::cout << "ScavTrap "<< name << " try to change his Gate keeper statut but can't (no energy or no hit points left)!" << std::endl;
+		return ;
+	}
 	if (!gate_kepper) {
 		std::cout << " ScavTrap " << name << " Gate keeper mode activated." << std::endl;
 		gate_kepper = true;
 	}
-	if (gate_kepper)
+	else
 	{
 		std::cout << " ScavTrap " << name << " Gate keeper mode desactivated." << std::endl;
 		gate_kepper = false;

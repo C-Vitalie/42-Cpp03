@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ClapTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vcucuiet <vcucuiet@student.42.fr>          +#+  +:+       +#+        */
+/*   By: vcucuiet <vita@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/22 00:11:46 by vcucuiet          #+#    #+#             */
-/*   Updated: 2026/06/22 12:24:42 by vcucuiet         ###   ########.fr       */
+/*   Updated: 2026/06/22 22:42:35 by vcucuiet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,4 +92,7 @@ unsigned int	ClapTrap::get_Hp(void) const {
 }
 unsigned int	ClapTrap::get_Ad(void) const {
 	return (this->Attack_damage);
+}
+std::string	ClapTrap::get_name(void) const {
+	return (this->name);
 }

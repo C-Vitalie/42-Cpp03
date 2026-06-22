@@ -3,27 +3,35 @@
 /*                                                        :::      ::::::::   */
 /*   ScavTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vcucuiet <vcucuiet@student.42.fr>          +#+  +:+       +#+        */
+/*   By: vcucuiet <vita@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/22 10:28:08 by vcucuiet          #+#    #+#             */
-/*   Updated: 2026/06/22 16:13:33 by vcucuiet         ###   ########.fr       */
+/*   Updated: 2026/06/22 22:33:32 by vcucuiet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ScavTrap.hpp"
 
-ScavTrap::ScavTrap(): name(""), Hit_point(100),
-Energy_point(50), Attack_damage(20), gate_kepper(false) {
+ScavTrap::ScavTrap(): ClapTrap("") {
+	this->Hit_point = 100;
+	this->Energy_point = 50;
+	this->Attack_damage = 20;
+	this->gate_kepper = false;
 	std::cout << "ScavTrap constructor called for :" << name << std::endl;	
 }
 
-ScavTrap::ScavTrap(const std::string new_name): ClapTrap(new_name), name(new_name), Hit_point(100),
-Energy_point(50), Attack_damage(20), gate_kepper(false) {
+ScavTrap::ScavTrap(const std::string new_name): ClapTrap(new_name) {
+	this->Hit_point = 100;
+	this->Energy_point = 50;
+	this->Attack_damage = 20;
+	this->gate_kepper = false;
 	std::cout << "ScavTrap constructor called for :" << name << std::endl;
 }
 
-ScavTrap::ScavTrap(ScavTrap const & src): ClapTrap(src.name), name(src.name), Hit_point(src.Hit_point),
-Energy_point(src.Energy_point), Attack_damage(src.Attack_damage) {
+ScavTrap::ScavTrap(ScavTrap const & src): ClapTrap(src.name) {
+	this->Hit_point = src.Hit_point;
+	this->Energy_point = src.Energy_point;
+	this->Attack_damage = src.Attack_damage;
 	std::cout << "ScavTrap constructor called for :" << name << std::endl;	
 }
 

@@ -3,27 +3,33 @@
 /*                                                        :::      ::::::::   */
 /*   FragTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vcucuiet <vcucuiet@student.42.fr>          +#+  +:+       +#+        */
+/*   By: vcucuiet <vita@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/22 10:28:08 by vcucuiet          #+#    #+#             */
-/*   Updated: 2026/06/22 16:38:16 by vcucuiet         ###   ########.fr       */
+/*   Updated: 2026/06/22 22:35:17 by vcucuiet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "FragTrap.hpp"
 
-FragTrap::FragTrap(): name(""), Hit_point(100),
-Energy_point(100), Attack_damage(30) {
+FragTrap::FragTrap(): ClapTrap("") {
+	this->Hit_point = 100;
+	this->Energy_point = 100;
+	this->Attack_damage = 30;
 	std::cout << "FragTrap constructor called for :" << name << std::endl;	
 }
 
-FragTrap::FragTrap(const std::string new_name): ClapTrap(new_name), name(new_name), Hit_point(100),
-Energy_point(100), Attack_damage(30) {
+FragTrap::FragTrap(const std::string new_name): ClapTrap(new_name) {
+	this->Hit_point = 100;
+	this->Energy_point = 100;
+	this->Attack_damage = 30;
 	std::cout << "FragTrap constructor called for :" << name << std::endl;
 }
 
-FragTrap::FragTrap(FragTrap const & src): ClapTrap(src.name), name(src.name), Hit_point(src.Hit_point),
-Energy_point(src.Energy_point), Attack_damage(src.Attack_damage) {
+FragTrap::FragTrap(FragTrap const & src): ClapTrap(src.name) {
+	this->Hit_point = src.Hit_point;
+	this->Energy_point = src.Energy_point;
+	this->Attack_damage = src.Attack_damage;
 	std::cout << "FragTrap constructor called for :" << name << std::endl;	
 }
 

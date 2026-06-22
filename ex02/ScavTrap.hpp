@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ScavTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vcucuiet <vcucuiet@student.42.fr>          +#+  +:+       +#+        */
+/*   By: vcucuiet <vita@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/22 10:28:26 by vcucuiet          #+#    #+#             */
-/*   Updated: 2026/06/22 12:35:38 by vcucuiet         ###   ########.fr       */
+/*   Updated: 2026/06/22 22:58:57 by vcucuiet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,6 @@
 class ScavTrap : public ClapTrap
 {
 private:
-	std::string		name;
-	unsigned int	Hit_point;
-	unsigned int	Energy_point;
-	unsigned int	Attack_damage;
 	bool			gate_kepper;
 public:
 	/* Constructor */

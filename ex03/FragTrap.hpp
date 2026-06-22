@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   FragTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vcucuiet <vcucuiet@student.42.fr>          +#+  +:+       +#+        */
+/*   By: vcucuiet <vita@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/22 10:28:26 by vcucuiet          #+#    #+#             */
-/*   Updated: 2026/06/22 18:24:03 by vcucuiet         ###   ########.fr       */
+/*   Updated: 2026/06/22 22:30:03 by vcucuiet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,11 +16,6 @@
 
 class FragTrap : virtual public ClapTrap
 {
-private:
-	std::string		name;
-	unsigned int	Hit_point;
-	unsigned int	Energy_point;
-	unsigned int	Attack_damage;
 public:
 	/* Constructor */
 	FragTrap();

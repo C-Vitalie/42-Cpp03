@@ -3,26 +3,26 @@
 /*                                                        :::      ::::::::   */
 /*   ClapTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vcucuiet <vcucuiet@student.42.fr>          +#+  +:+       +#+        */
+/*   By: vcucuiet <vita@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/22 00:11:46 by vcucuiet          #+#    #+#             */
-/*   Updated: 2026/06/22 18:53:15 by vcucuiet         ###   ########.fr       */
+/*   Updated: 2026/06/22 22:42:35 by vcucuiet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include"ClapTrap.hpp"
 
-ClapTrap::ClapTrap(): name("_clap_name"), Hit_point(10),
+ClapTrap::ClapTrap(): name(""), Hit_point(10),
 Energy_point(10), Attack_damage(0) {
 	std::cout << "ClapTrap constructor called for :" << name << std::endl;	
 }
 
-ClapTrap::ClapTrap(std::string new_name): name(new_name + "_clap_name"), Hit_point(10),
+ClapTrap::ClapTrap(std::string new_name): name(new_name), Hit_point(10),
 Energy_point(10), Attack_damage(0) {
 	std::cout << "ClapTrap constructor called for :" << name << std::endl;
 }
 
-ClapTrap::ClapTrap(ClapTrap const & src): name(src.name + "_clap_name"), Hit_point(src.Hit_point),
+ClapTrap::ClapTrap(ClapTrap const & src): name(src.name), Hit_point(src.Hit_point),
 Energy_point(src.Energy_point), Attack_damage(src.Attack_damage) {
 	std::cout << "ClapTrap constructor called for :" << name << std::endl;	
 }

@@ -1,17 +1,25 @@
 #include "DiamondTrap.hpp"
 
-DiamondTrap::DiamondTrap(): ScavTrap(""),  FragTrap(""),name(""), Hit_point(FragTrap::get_Hp()),
-Energy_point(ScavTrap::get_Ep()), Attack_damage(FragTrap::get_Ad()) {
+DiamondTrap::DiamondTrap(): ClapTrap("_clap_name"), ScavTrap(""), FragTrap(""), name("") {
+	this->Hit_point = 100;
+	this->Energy_point = 50;
+	this->Attack_damage = 30;
 	std::cout << "DiamondTrap constructor called for :" << name << std::endl;	
 }
 
-DiamondTrap::DiamondTrap(const std::string new_name): ClapTrap(new_name), ScavTrap(new_name), FragTrap(new_name),
-name(new_name), Hit_point(FragTrap::get_Hp()), Energy_point(ScavTrap::get_Ep()), Attack_damage(FragTrap::get_Ad()) {
+DiamondTrap::DiamondTrap(const std::string new_name): ClapTrap(new_name + "_clap_name"),
+ScavTrap(new_name), FragTrap(new_name), name(new_name){
+	this->Hit_point = 100;
+	this->Energy_point = 50;
+	this->Attack_damage = 30;
 	std::cout << "DiamondTrap constructor called for :" << name << std::endl;
 }
 
-DiamondTrap::DiamondTrap(DiamondTrap const & src): ClapTrap(src.name), ScavTrap(src.name), FragTrap(src.name),
-name(src.name), Hit_point(src.Hit_point), Energy_point(src.Energy_point), Attack_damage(src.Attack_damage) {
+DiamondTrap::DiamondTrap(DiamondTrap const & src): ClapTrap(src.name + "_clap_name"),
+ScavTrap(src.name), FragTrap(src.name), name(src.name){
+	this->Hit_point = src.Hit_point;
+	this->Energy_point = src.Energy_point;
+	this->Attack_damage = src.Attack_damage;
 	std::cout << "DiamondTrap constructor called for :" << name << std::endl;	
 }
 
@@ -26,9 +34,6 @@ DiamondTrap	& DiamondTrap::operator=(DiamondTrap const & src)
 	this->Energy_point = src.Energy_point;
 	this->Attack_damage = src.Attack_damage;
 	return (*this);
-}
-void	DiamondTrap::attack(const std::string& target) {
-	ScavTrap::attack(target);
 }
 
 void	DiamondTrap::takeDamage(unsigned int amount)

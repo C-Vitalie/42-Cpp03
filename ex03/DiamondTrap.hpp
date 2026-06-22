@@ -8,9 +8,6 @@ class DiamondTrap : public ScavTrap, public FragTrap
 {
 private:
 	std::string		name;
-	unsigned int	Hit_point;
-	unsigned int	Energy_point;
-	unsigned int	Attack_damage;
 public:
 	/* Constructor */
 	DiamondTrap();
@@ -24,7 +21,7 @@ public:
 	DiamondTrap		&operator=(DiamondTrap const & src);
 
 	/* Other */
-	void			attack(const std::string& target);
+	using			ScavTrap::attack;
 	void			takeDamage(unsigned int amount);
 	void			beRepaired(unsigned int amount);
 	unsigned int	get_Ep() const ;
